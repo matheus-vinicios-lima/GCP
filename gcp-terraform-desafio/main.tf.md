@@ -1,3 +1,6 @@
+```bash
+terraform init
+
 terraform {
   backend "gcs" {
     bucket  = "tf-bucket-377907"
