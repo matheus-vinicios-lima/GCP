@@ -1,4 +1,4 @@
-```bash
+```bash```
 terraform init
 
 terraform {
