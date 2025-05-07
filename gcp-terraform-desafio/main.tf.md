@@ -1,5 +1,5 @@
 Copie os dados abaixo para dentro do seu **main.tf**
-
+```
 terraform {
   backend "gcs" {
     bucket  = "tf-bucket-377907"
@@ -61,3 +61,4 @@ resource "google_compute_firewall" "tf-firewall" {
   source_tags = ["web"]
   source_ranges = ["0.0.0.0/0"]
 }
+```
