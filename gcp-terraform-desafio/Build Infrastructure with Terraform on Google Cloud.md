@@ -41,27 +41,27 @@ Verifique se o argumento de zona foi adicionado com os argumentos de projeto e r
 
 4️⃣ Inicialize o Terraform.
 
-Tarefa 2: importe a infraestrutura
+## Tarefa 2: importe a infraestrutura
 
-1- No Console do Google Cloud, no Menu de navegação, clique em Compute Engine > Instâncias de VM.
+1️⃣ No Console do Google Cloud, no Menu de navegação, clique em Compute Engine > Instâncias de VM.
 Duas instâncias chamadas tf-instance-1 e tf-instance-2 já foram criadas para você.
 
-2- Importe as instâncias atuais para o módulo instances. Para isso, siga estas etapas:
+2️⃣ Importe as instâncias atuais para o módulo instances. Para isso, siga estas etapas:
 
 Primeiro, adicione a referência do módulo ao arquivo main.tf e reinicialize o Terraform.
 Em seguida, escreva as configurações do recurso no arquivo instances.tf para corresponder às instâncias atuais.
 
-Dê às instâncias os nomes tf-instance-1 e tf-instance-2.
+Dê às instâncias os nomes ```tf-instance-1``` e ```tf-instance-2```.
 Neste laboratório, a configuração do recurso deve ser mínima.
 Para isso, você vai precisar incluir estes argumentos extras na configuração:
-machine_type, boot_disk, network_interface, metadata_startup_script e allow_stopping_for_update.
+```machine_type```, ```boot_disk```, ```network_interface```, ```metadata_startup_script``` e ```allow_stopping_for_update```.
 No caso dos últimos dois argumentos, use a configuração a seguir para que não seja necessário recriá-la:
-
+```
 metadata_startup_script = <<-EOT
         #!/bin/bash
     EOT
 allow_stopping_for_update = true
-
+```
 Depois de escrever as configurações do recurso no módulo, 
 use o comando terraform import e importe essas preferências para o módulo instances.
 
@@ -69,7 +69,7 @@ use o comando terraform import e importe essas preferências para o módulo inst
 o código apply vai atualizar as instâncias atuais. Essa opção é aceita no laboratório, 
 mas é necessário preencher todos os argumentos corretamente antes da importação em um ambiente de produção.
 
-Tarefa 3: configure um back-end remoto
+## Tarefa 3: configure um back-end remoto
 
 1- Crie um recurso de bucket do Cloud Storage no módulo storage.
 Para nomear o bucket, use tf-bucket-377907.
@@ -89,7 +89,7 @@ Para possibilitar a avaliação, use o prefixo terraform/state.
 o Terraform vai perguntar se você quer copiar os dados de estado para o novo back-end.
 Digite yes no prompt.
 
-Tarefa 4: modifique e atualize a infraestrutura
+## Tarefa 4: modifique e atualize a infraestrutura
 
 1- Acesse o módulo instances e modifique o recurso tf-instance-1 para usar um tipo de máquina e2-standard-2.
 
@@ -99,12 +99,12 @@ Tarefa 4: modifique e atualize a infraestrutura
 
 4- Inicialize o Terraform e aplique (apply) as mudanças.
 
-Tarefa 5: destrua os recursos
+## Tarefa 5: destrua os recursos
 
 Remova o recurso do arquivo de configuração para destruir a terceira instância tf-instance-999986.
 Depois disso, inicialize o Terraform e aplique (apply) as mudanças.
 
-Tarefa 6: use um módulo do Registry
+## Tarefa 6: use um módulo do Registry
 
 1- No Terraform Registry, procure o módulo network (em inglês).
 
@@ -122,7 +122,7 @@ Como essa VPC não exige intervalos secundários ou rotas associadas, omita essa
 
 Observação: nessa configuração de instância, você vai precisar atualizar o argumento de rede para tf-vpc-385209 e adicionar o argumento de sub-rede com a sub-rede certa para cada instância.
 
-Tarefa 7: configure um firewall
+## Tarefa 7: configure um firewall
 
 Crie um recurso de regra de firewall chamado tf-firewall no arquivo main.tf.
 
@@ -130,6 +130,6 @@ Essa regra de firewall deve permitir que a rede tf-vpc-385209 autorize conexões
 Adicione o argumento source_ranges com o intervalo de IP correto (0.0.0.0/0).
 Inicialize o Terraform e aplique (apply) as mudanças.
 
-Observação: para recuperar o argumento network obrigatório, 
+'Observação: para recuperar o argumento network obrigatório, 
 inspecione o estado e encontre o ID ou o self_link do recurso google_compute_network que você criou.
-Essa informação fica no formulário projects/PROJECT_ID/global/networks/tf-vpc-385209.
+Essa informação fica no formulário projects/PROJECT_ID/global/networks/tf-vpc-385209.'
