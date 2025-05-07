@@ -130,6 +130,6 @@ Essa regra de firewall deve permitir que a rede tf-vpc-385209 autorize conexões
 Adicione o argumento source_ranges com o intervalo de IP correto (0.0.0.0/0).
 Inicialize o Terraform e aplique (apply) as mudanças.
 
-'Observação: para recuperar o argumento network obrigatório, 
+`Observação: para recuperar o argumento network obrigatório, 
 inspecione o estado e encontre o ID ou o self_link do recurso google_compute_network que você criou.
-Essa informação fica no formulário projects/PROJECT_ID/global/networks/tf-vpc-385209.'
+Essa informação fica no formulário projects/PROJECT_ID/global/networks/tf-vpc-385209.`
