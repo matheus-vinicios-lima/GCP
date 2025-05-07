@@ -2,7 +2,7 @@ Copie os dados abaixo para dentro do seu **main.tf**
 ```
 terraform {
   backend "gcs" {
-    bucket  = "tf-bucket-377907" ⚠️**Substituir pelo nome do bucket informado no seu desafio**⚠️
+    bucket  = "tf-bucket-377907" #⚠️**Substituir pelo nome do bucket informado no seu desafio**⚠️
  prefix  = "terraform/state"
   }
   required_providers {
