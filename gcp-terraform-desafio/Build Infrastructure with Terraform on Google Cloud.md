@@ -18,7 +18,7 @@ criar um bucket do Cloud Storage para hospedar seu back-end remoto.
 
 ## Tarefa 1: crie os arquivos de configuração
 
-**1-** No Cloud Shell, crie seus arquivos de configuração do Terraform e uma estrutura de diretórios como esta:
+1️⃣ No Cloud Shell, crie seus arquivos de configuração do Terraform e uma estrutura de diretórios como esta:
 ```
 main.tf
 variables.tf
@@ -32,14 +32,14 @@ modules/
     ├── outputs.tf
     └── variables.tf
 ```
-2- Preencha os arquivos variables.tf no diretório raiz e nos módulos.
-Adicione três variáveis para cada arquivo: region, zone e project_id.
+2️⃣ Preencha os arquivos variables.tf no diretório raiz e nos módulos.
+Adicione três variáveis para cada arquivo: ```region```, ```zone``` e ```project_id```.
 Como valores padrão, use us-east1, us-east1-c e seu ID do projeto do Google Cloud.
 
-3- Adicione o bloco do Terraform e o provedor do Google (link em inglês) ao arquivo main.tf.
+3️⃣ Adicione o bloco do Terraform e o provedor do Google (link em inglês) ao arquivo main.tf.
 Verifique se o argumento de zona foi adicionado com os argumentos de projeto e região no bloco do provedor do Google.
 
-4- Inicialize o Terraform.
+4️⃣ Inicialize o Terraform.
 
 Tarefa 2: importe a infraestrutura
 
