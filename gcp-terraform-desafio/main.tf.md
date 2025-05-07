@@ -32,7 +32,7 @@ module "vpc" {
     version = "~> 6.0.0"
 
     project_id   = var.project_id
-    network_name = "tf-vpc-385209"
+    network_name = "tf-vpc-385209" #⚠️Substituir pelo nome de rede informado no seu desafio⚠️
     routing_mode = "GLOBAL"
 
     subnets = [
