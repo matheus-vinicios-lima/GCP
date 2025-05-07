@@ -18,7 +18,7 @@ criar um bucket do Cloud Storage para hospedar seu back-end remoto.
 
 ## Tarefa 1: crie os arquivos de configuração
 
-**1- No Cloud Shell, crie seus arquivos de configuração do Terraform e uma estrutura de diretórios como esta:**
+**1-** No Cloud Shell, crie seus arquivos de configuração do Terraform e uma estrutura de diretórios como esta:
 ```
 main.tf
 variables.tf
