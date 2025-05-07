@@ -1,6 +1,4 @@
-```bash
-```
-terraform init
+Copie os dados abaixo para dentro do seu *main.tf*
 
 terraform {
   backend "gcs" {
